@@ -99,7 +99,7 @@ const HyphenDeskPreview = () => {
           "Comprehensive user management system for support agents and administrators (HyphenDesk module)",
       },
     ],
-    githubUrl: "https://github.com/YuvrajJais9257/Hyphendesk.git",
+
     relatedProjects: [
       {
         name: "HyphenView",

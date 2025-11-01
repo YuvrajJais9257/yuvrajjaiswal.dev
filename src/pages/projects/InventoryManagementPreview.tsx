@@ -77,7 +77,7 @@ const InventoryManagementPreview = () => {
         caption: "Secure database connection configuration for inventory data sources"
       }
     ],
-    githubUrl: "https://github.com/YuvrajJais9257/Inventory_Management_System.git",
+
     relatedProjects: [
       {
         name: "HyphenView",

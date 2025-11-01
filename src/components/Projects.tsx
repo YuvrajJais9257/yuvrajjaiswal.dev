@@ -1,5 +1,5 @@
 import React from "react";
-import { TrendingUp, ExternalLink, Github } from "lucide-react";
+import { TrendingUp, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,6 @@ export const Projects = () => {
       keyMetric: "Unified platform serving 100+ users",
       gradient: "from-blue-500 to-purple-500",
       previewRoute: "/projects/hyphenview",
-      githubUrl: "https://github.com/YuvrajJais9257/HyphenView.git",
       type: "Parent Platform"
     },
     {
@@ -22,7 +21,6 @@ export const Projects = () => {
       keyMetric: "65% increase in self-service analytics",
       gradient: "from-green-500 to-emerald-500",
       previewRoute: "/projects/reporting-console",
-      githubUrl: "https://github.com/YuvrajJais9257/Hyphenview_Reporting_Console.git",
       type: "Integrated Module"
     },
     {
@@ -32,7 +30,6 @@ export const Projects = () => {
       keyMetric: "70% reduction in manual tracking time",
       gradient: "from-purple-500 to-pink-500",
       previewRoute: "/projects/inventory-management",
-      githubUrl: "https://github.com/YuvrajJais9257/Inventory_Management_System.git",
       type: "Integrated Module"
     },
     {
@@ -42,7 +39,6 @@ export const Projects = () => {
       keyMetric: "40% reduction in response time",
       gradient: "from-orange-500 to-red-500",
       previewRoute: "/projects/hyphendesk",
-      githubUrl: "https://github.com/YuvrajJais9257/Hyphendesk.git",
       type: "Integrated Module"
     }
   ];
@@ -102,26 +98,17 @@ export const Projects = () => {
                 </div>
               </div>
 
-              <div className="flex gap-3">
+              <div className="flex justify-center">
                 <Button
                   asChild
-                  className="flex-1 bg-purple-600 hover:bg-purple-700 text-white"
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-8"
                 >
                   <Link to={project.previewRoute}>
                     <ExternalLink size={16} className="mr-2" />
                     View Preview
                   </Link>
                 </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  className="flex-1 border-purple-600 text-purple-600 hover:bg-purple-50"
-                >
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Github size={16} className="mr-2" />
-                    Source Code
-                  </a>
-                </Button>
+                {/* Source Code button removed for company projects - maintaining professional confidentiality */}
               </div>
             </div>
           ))}

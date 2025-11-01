@@ -13,6 +13,10 @@ export const Footer = () => {
             <p className="text-gray-500 text-sm mt-1">
               Built with React.js
             </p>
+            <p className="text-gray-500 text-xs mt-2 max-w-md">
+              All project screenshots used with permission and from non-production environments. 
+              Code samples and implementations are conceptual representations for portfolio purposes.
+            </p>
           </div>
           
           <div className="flex space-x-6">

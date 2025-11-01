@@ -75,7 +75,7 @@ const HyphenViewPreview = () => {
         caption: "Centralized user registration and onboarding system"
       }
     ],
-    githubUrl: "https://github.com/YuvrajJais9257/HyphenView.git",
+
     relatedProjects: [
       {
         name: "Reporting Console",

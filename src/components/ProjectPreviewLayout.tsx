@@ -27,7 +27,6 @@ interface ProjectPreviewLayoutProps {
   myRole: string;
   integrationDetails?: string;
   screenshots: Screenshot[];
-  githubUrl: string;
   relatedProjects?: Array<{
     name: string;
     description: string;
@@ -51,7 +50,6 @@ export const ProjectPreviewLayout: React.FC<ProjectPreviewLayoutProps> = ({
   myRole,
   integrationDetails,
   screenshots,
-  githubUrl,
   relatedProjects,
   challenges
 }) => {
@@ -102,6 +100,15 @@ export const ProjectPreviewLayout: React.FC<ProjectPreviewLayoutProps> = ({
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Disclaimer Banner */}
+      <div className="bg-orange-50 border-b border-orange-200 py-3 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-orange-800 text-sm">
+            💡 This project is currently under maintenance. Screenshots shown are from UAT/demo environments for portfolio demonstration purposes only.
+          </p>
+        </div>
+      </div>
+
       {/* Header Section */}
       <div className="bg-gradient-to-br from-purple-50 to-blue-50 py-8 px-4">
         <div className="max-w-6xl mx-auto">
@@ -328,7 +335,7 @@ export const ProjectPreviewLayout: React.FC<ProjectPreviewLayoutProps> = ({
           <p className="text-gray-600 mb-8">
             Let's discuss how I can bring similar solutions to your organization.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button
               asChild
               size="lg"
@@ -336,21 +343,15 @@ export const ProjectPreviewLayout: React.FC<ProjectPreviewLayoutProps> = ({
             >
               <a href="mailto:yuvraj8257@gmail.com">
                 <Mail size={20} className="mr-2" />
-                Email Me
+                Email Me About This Project
               </a>
             </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-4"
-            >
-              <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                <Github size={20} className="mr-2" />
-                View Source Code
-              </a>
-            </Button>
+            {/* Source code button removed for company projects - maintaining professional confidentiality */}
           </div>
+          <p className="text-center text-gray-600 mt-4 text-sm">
+            Source code is proprietary to Erasmith Technologies. Happy to discuss architecture, 
+            technical decisions, and implementation details in an interview setting.
+          </p>
         </div>
       </div>
 

@@ -82,7 +82,7 @@ const ReportingConsolePreview = () => {
         caption: "Advanced table report aggregations with grouping and summary functions"
       }
     ],
-    githubUrl: "https://github.com/YuvrajJais9257/Hyphenview_Reporting_Console.git",
+
     relatedProjects: [
       {
         name: "HyphenView",
