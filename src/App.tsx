@@ -9,6 +9,7 @@ import HyphenViewPreview from "./pages/projects/HyphenViewPreview";
 import ReportingConsolePreview from "./pages/projects/ReportingConsolePreview";
 import InventoryManagementPreview from "./pages/projects/InventoryManagementPreview";
 import HyphenDeskPreview from "./pages/projects/HyphenDeskPreview";
+import SmartJobHunterPreview from "./pages/projects/SmartJobHunterPreview";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/projects/reporting-console" element={<ReportingConsolePreview />} />
           <Route path="/projects/inventory-management" element={<InventoryManagementPreview />} />
           <Route path="/projects/hyphendesk" element={<HyphenDeskPreview />} />
+          <Route path="/projects/smart-job-hunter" element={<SmartJobHunterPreview />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

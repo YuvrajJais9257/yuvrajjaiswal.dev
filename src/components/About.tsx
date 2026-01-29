@@ -39,15 +39,22 @@ export const About = () => {
         <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg mb-12">
           <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
             <p>
-              I'm a Full Stack Developer at Erasmith Technologies with 1.8 years of production 
-              experience building enterprise applications that serve 1000+ users daily.
+              Full Stack Developer with 2 years building production applications integrating AI/LLM capabilities using LangChain, OpenAI GPT-4, and RAG pipelines.
             </p>
             <p>
-              My expertise lies in React.js, FastAPI, and AI integration. I've architected an 
-              AI-powered reporting console with natural language SQL generation, developed inventory 
-              management systems handling 5000+ assets, and built support ticketing platforms 
-              processing 500+ tickets monthly.
+              Experience developing analytics platforms, Text-to-SQL systems, and AI-powered agents serving 1000+ users. Strong foundation in React, Python (Flask/FastAPI), PostgreSQL, and modern full-stack development practices.
             </p>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl p-6 mt-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">🚀 KEY ACHIEVEMENTS:</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li>• Built AI-powered Text-to-SQL query generator using LangChain multi-agent workflows and OpenAI GPT-4 (90% accuracy, 65% user adoption)</li>
+                <li>• Built and maintain 80+ RESTful API endpoints using Flask/FastAPI with JWT authentication</li>
+                <li>• Optimized PostgreSQL database performance by 45% (12s → 6.6s) through strategic indexing</li>
+                <li>• Created automated ETL pipelines using Pandas to process 5000+ records</li>
+                <li>• Deployed 100+ applications using Docker and CI/CD pipelines maintaining 99.9% uptime</li>
+              </ul>
+            </div>
           </div>
         </div>
 

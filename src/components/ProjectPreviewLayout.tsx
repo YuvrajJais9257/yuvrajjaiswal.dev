@@ -341,7 +341,7 @@ export const ProjectPreviewLayout: React.FC<ProjectPreviewLayoutProps> = ({
               size="lg"
               className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4"
             >
-              <a href="mailto:yuvraj8257@gmail.com">
+              <a href="mailto:yuvraj.jaiswal@gmail.com">
                 <Mail size={20} className="mr-2" />
                 Email Me About This Project
               </a>

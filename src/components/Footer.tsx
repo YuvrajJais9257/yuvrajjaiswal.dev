@@ -39,7 +39,7 @@ export const Footer = () => {
               <LinkedinIcon size={24} />
             </a>
             <a
-              href="mailto:yuvraj8257@gmail.com"
+              href="mailto:yuvraj.jaiswal@gmail.com"
               className="text-gray-400 hover:text-white transition-colors duration-200"
               aria-label="Email"
             >

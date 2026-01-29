@@ -56,7 +56,7 @@ export const Navigation = () => {
             ))}
 
             <a
-              href="mailto:yuvraj8257@gmail.com"
+              href="mailto:yuvraj.jaiswal@gmail.com"
               className="ml-4 px-6 py-2 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors duration-200"
             >
               Hire Me
@@ -87,7 +87,7 @@ export const Navigation = () => {
               </button>
             ))}
             <a
-              href="mailto:yuvraj8257@gmail.com"
+              href="mailto:yuvraj.jaiswal@gmail.com"
               className="block w-full text-center mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors duration-200"
             >
               Hire Me

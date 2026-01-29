@@ -7,28 +7,29 @@ export const CurrentlyExploring = () => {
       title: "Learning",
       icon: <BookOpen className="text-blue-600" size={32} />,
       items: [
-        "Next.js 14 and App Router",
-        "AI Integration (OpenAI/Claude APIs)",
-        "Advanced React Performance",
-        "System Design for Scale"
+        "Advanced LangChain multi-agent workflows and RAG pipelines",
+        "OpenAI GPT-4 integration and prompt engineering optimization",
+        "Next.js 14 with AI-powered features and streaming responses",
+        "System Design for AI/ML applications at scale"
       ]
     },
     {
       title: "Building",
       icon: <Code className="text-green-600" size={32} />,
       items: [
-        "AI content generation platform",
-        "Real-time collaboration tools",
-        "Open source contributions"
+        "AI-powered code review automation platform using LangChain",
+        "Multi-agent job search system with resume matching",
+        "RAG-based document analysis and query system",
+        "Open source contributions to AI/ML tools"
       ]
     },
     {
       title: "Seeking",
       icon: <Search className="text-purple-600" size={32} />,
       items: [
-        "Full Stack Developer roles in product-based companies or AI-forward startups",
-        "Expected: ₹12-20 LPA",
-        "Notice: Immediate to 15 days",
+        "Full Stack Developer roles with AI/LLM integration focus",
+        "Product-based companies building AI-powered applications",
+        "Expected: ₹12-20 LPA | Notice: Immediate to 15 days",
         "Location: Remote, Noida, Bangalore, Gurgaon"
       ]
     }

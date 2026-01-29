@@ -27,14 +27,14 @@ export const Hero = () => {
 
         {/* Subheadline */}
         <h2 className="text-2xl md:text-3xl text-gray-700 mb-8 font-semibold">
-          Full Stack Developer | React.js + FastAPI | AI Integration Specialist
+          Full Stack Developer | AI/LLM Integration | React + Python | 2 Years Experience
         </h2>
 
         {/* Description */}
         <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-          Building production-grade enterprise applications with AI integration. 1.8 years of experience 
-          serving 1000+ users and deploying 100+ applications. Specialized in React.js, FastAPI, and 
-          performance optimization.
+          Full Stack Developer with 2 years building production applications integrating AI/LLM capabilities using LangChain, 
+          OpenAI GPT-4, and RAG pipelines. Experience developing analytics platforms, Text-to-SQL systems, and AI-powered 
+          agents serving 1000+ users with 99.9% uptime.
         </p>
 
         {/* CTA Buttons */}
@@ -52,7 +52,7 @@ export const Hero = () => {
             asChild
             className="border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-4 text-lg"
           >
-            <a href="/Yuvraj_Jaiswal_7838379576.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/Yuvraj_Jaiswal_Full_Stack_Dev_2_Years_Resume.pdf" target="_blank" rel="noopener noreferrer">
               Download Resume
             </a>
           </Button>
@@ -79,7 +79,7 @@ export const Hero = () => {
             <LinkedinIcon size={28} />
           </a>
           <a
-            href="mailto:yuvraj8257@gmail.com"
+            href="mailto:yuvraj.jaiswal@gmail.com"
             className="text-gray-600 hover:text-purple-600 transition-colors duration-200"
             aria-label="Email"
           >

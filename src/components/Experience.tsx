@@ -5,51 +5,61 @@ import { Briefcase, Calendar, TrendingUp, Users, Clock, BarChart3 } from "lucide
 export const Experience = () => {
   const projects = [
     {
-      name: "HyphenView - AI-Powered Reporting Console",
-      description: "Enterprise reporting platform with AI-driven SQL query generation serving 50+ users",
+      name: "AI/LLM Integration Projects",
+      description: "Built AI-powered Text-to-SQL query generator using LangChain multi-agent workflows and OpenAI GPT-4",
       features: [
-        "AI query builder (natural language → SQL)",
-        "20+ Highcharts visualization types",
-        "Drag-and-drop table builder",
-        "Automated report scheduling",
-        "Advanced filtering (date ranges, AND/OR conditions, aggregations)",
-        "Role-based access control (RBAC)"
+        "LangChain multi-agent workflows with OpenAI GPT-4 integration",
+        "Few-shot prompt engineering templates with context memory",
+        "Natural language to SQL conversion (90% accuracy)",
+        "ChatGPT-style interface with streaming responses",
+        "Real-time natural language query processing for 50+ users",
+        "Interactive visualizations and intelligent PostgreSQL query generation"
       ],
       metrics: [
-        { icon: TrendingUp, value: "65%", label: "increase in self-service analytics" },
-        { icon: Clock, value: "45%", label: "faster load times (12s → 6.6s)" },
-        { icon: Users, value: "50+", label: "daily active users" },
-        { icon: BarChart3, value: "10+", label: "hours/week saved" }
+        { icon: TrendingUp, value: "90%", label: "AI query accuracy rate" },
+        { icon: Clock, value: "65%", label: "user adoption rate" },
+        { icon: Users, value: "50+", label: "active users served" },
+        { icon: BarChart3, value: "100%", label: "non-technical user accessibility" }
       ],
-      techStack: ["React.js", "Redux Toolkit", "FastAPI", "PostgreSQL", "Highcharts", "Docker"]
+      techStack: ["LangChain", "OpenAI GPT-4", "Flask", "FastAPI", "React.js", "PostgreSQL"]
     },
     {
-      name: "Inventory Management System",
-      description: "Full-stack system managing 5000+ assets across 20 locations",
+      name: "Backend & Full Stack Development",
+      description: "Built and maintain 80+ RESTful API endpoints with comprehensive system optimization",
       features: [
-        "Pivot-style views with real-time synchronization",
-        "Dynamic filtering and location-based tracking",
-        "Complex Redux state management for nested data",
-        "Integration with HyphenView analytics"
+        "80+ RESTful API endpoints using Flask/FastAPI",
+        "JWT authentication and role-based access control",
+        "Automated ETL pipelines processing 5000+ records using Pandas",
+        "PostgreSQL performance optimization (45% improvement: 12s → 6.6s)",
+        "10+ production dashboards with React.js and Redux",
+        "Real-time analytics and KPI tracking systems"
       ],
       metrics: [
-        { icon: TrendingUp, value: "70%", label: "reduction in manual tracking time" }
+        { icon: TrendingUp, value: "45%", label: "database performance improvement" },
+        { icon: Clock, value: "80+", label: "API endpoints maintained" },
+        { icon: Users, value: "5000+", label: "records processed via ETL" },
+        { icon: BarChart3, value: "10+", label: "production dashboards built" }
       ],
-      techStack: ["FastAPI", "React.js", "Redux Toolkit", "PostgreSQL"]
+      techStack: ["Flask", "FastAPI", "React.js", "Redux", "PostgreSQL", "Pandas", "JWT"]
     },
     {
-      name: "HyphenDesk Support Ticketing Platform",
-      description: "Enterprise ticketing system processing 500+ tickets/month",
+      name: "System Design & DevOps",
+      description: "Architected microservices infrastructure and deployment pipelines",
       features: [
-        "Automated routing and SLA tracking",
-        "Real-time email notifications",
-        "Priority-based assignment",
-        "Resolution analytics dashboard"
+        "Microservices infrastructure supporting AI agent workflows",
+        "Docker containerization and CI/CD pipeline deployment",
+        "100+ applications deployed maintaining 99.9% uptime",
+        "Automated testing suite covering 80+ endpoints",
+        "QA validation cycle reduction by 60%",
+        "Database integrations and performance monitoring"
       ],
       metrics: [
-        { icon: Clock, value: "40%", label: "reduction in response time (4hrs → 2.4hrs)" }
+        { icon: TrendingUp, value: "99.9%", label: "system uptime maintained" },
+        { icon: Clock, value: "60%", label: "QA cycle reduction" },
+        { icon: Users, value: "100+", label: "applications deployed" },
+        { icon: BarChart3, value: "80+", label: "endpoints tested automatically" }
       ],
-      techStack: ["FastAPI", "React.js", "Redux Toolkit", "PostgreSQL"]
+      techStack: ["Docker", "CI/CD", "Linux", "Nginx", "Microservices", "Testing Automation"]
     }
   ];
 
@@ -67,13 +77,13 @@ export const Experience = () => {
           <div className="flex items-center gap-4 mb-4">
             <Briefcase className="text-purple-600" size={32} />
             <div>
-              <h3 className="text-2xl font-bold text-gray-900">Erasmith Technologies Pvt Ltd</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Erasmith Pvt Ltd</h3>
               <p className="text-purple-600 font-semibold text-lg">Full Stack Developer</p>
             </div>
             <div className="ml-auto text-right">
               <div className="flex items-center gap-2 text-gray-600">
                 <Calendar size={16} />
-                <span>Feb 2024 - Present</span>
+                <span>Feb 2024 - Present (Completed 2-year service commitment)</span>
               </div>
             </div>
           </div>

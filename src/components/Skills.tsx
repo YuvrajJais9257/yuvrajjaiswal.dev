@@ -3,28 +3,28 @@ import React from "react";
 export const Skills = () => {
   const skillCategories = [
     {
+      title: "AI/ML Integration",
+      skills: ["LangChain", "OpenAI GPT-4", "Multi-Agent Systems", "RAG Pipelines", "Prompt Engineering", "Text-to-SQL"]
+    },
+    {
       title: "Frontend Development",
-      skills: ["React.js", "Redux Toolkit", "JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "Tailwind CSS"]
+      skills: ["React.js", "Redux", "JavaScript (ES6+)", "TypeScript", "Tailwind CSS", "Next.js"]
     },
     {
       title: "Backend Development", 
-      skills: ["FastAPI", "Flask", "Node.js", "Express.js", "REST APIs"]
+      skills: ["Python", "Flask", "FastAPI", "Node.js", "RESTful APIs (80+ endpoints)", "JWT Auth"]
     },
     {
-      title: "Database & Optimization",
-      skills: ["PostgreSQL", "MySQL", "MongoDB", "Query Optimization", "Indexing"]
+      title: "Database & ORM",
+      skills: ["PostgreSQL", "MySQL", "MongoDB", "SQLAlchemy ORM", "Query Optimization"]
     },
     {
-      title: "AI & Integration",
-      skills: ["AI Query Generation", "Natural Language Processing", "Prompt Engineering", "OpenAI API"]
+      title: "DevOps & Tools",
+      skills: ["Docker", "Git", "CI/CD", "Linux", "Nginx"]
     },
     {
-      title: "Data Visualization",
-      skills: ["Highcharts", "Dynamic Charts", "Dashboards", "Real-time Data"]
-    },
-    {
-      title: "DevOps & Cloud",
-      skills: ["Docker", "CI/CD", "Git/GitHub", "Vercel", "Netlify", "Render"]
+      title: "Data Processing",
+      skills: ["Pandas", "ETL Pipelines", "Data Normalization", "Real-time Analytics"]
     }
   ];
 

@@ -6,8 +6,8 @@ export const Contact = () => {
     {
       icon: <Mail className="text-purple-600" size={24} />,
       title: "Email",
-      value: "yuvraj8257@gmail.com",
-      href: "mailto:yuvraj8257@gmail.com",
+      value: "yuvraj.jaiswal@gmail.com",
+      href: "mailto:yuvraj.jaiswal@gmail.com",
     },
     {
       icon: <Phone className="text-purple-600" size={24} />,
@@ -60,7 +60,7 @@ export const Contact = () => {
             asChild
             className="bg-purple-600 hover:bg-purple-700 text-white px-12 py-6 text-xl mb-4"
           >
-            <a href="mailto:yuvraj8257@gmail.com">Send Me an Email</a>
+            <a href="mailto:yuvraj.jaiswal@gmail.com">Send Me an Email</a>
           </Button>
           <div className="mt-4">
             <Button
@@ -70,7 +70,7 @@ export const Contact = () => {
               className="border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-4 text-lg"
             >
               <a
-                href="/Yuvraj_Jaiswal_7838379576.pdf"
+                href="/Yuvraj_Jaiswal_Full_Stack_Dev_2_Years_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >

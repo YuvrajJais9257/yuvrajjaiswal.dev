@@ -2,26 +2,27 @@ import { ProjectPreviewLayout } from "@/components/ProjectPreviewLayout";
 
 const HyphenDeskPreview = () => {
   const projectData = {
-    title: "HyphenDesk - Support Ticketing Module",
+    title: "HyphenDesk - IT Service Management Platform",
     description:
-      "Enterprise ticketing platform processing 500+ tickets/month, integrated with HyphenView ecosystem",
-    status: "🔧 Production Application - Currently Under Maintenance",
+      "Comprehensive ITSM platform providing unified solution for managing IT services, incidents, assets, users, and workflows with automated processes and centralized management",
+    status: "🔧 Production ITSM Platform - Currently Under Maintenance",
     integrationNote:
-      "Part of HyphenView Enterprise Platform - Support Management Module",
+      "Standalone IT Service Management Platform with comprehensive ITSM capabilities",
     techStack: [
-      "FastAPI",
-      "React.js",
+      "React.js 19.0",
       "Redux Toolkit",
+      "Material-UI v6.4.7",
+      "FastAPI",
       "PostgreSQL",
-      "Node.js",
-      "WebSocket",
-      "Email Service",
+      "JWT Authentication",
+      "CSS Modules",
+      "Axios",
     ],
     heroImage: {
-      src: "/Hyphen_Screenshots/Hyphen_List_Of_Alerts.png",
-      alt: "HyphenDesk Alert Management",
+      src: "/Hyphendesk_Screenshots/Hyphndesk_welcome.png",
+      alt: "HyphenDesk Welcome Dashboard",
       caption:
-        "Comprehensive alert and ticket management system integrated within HyphenView platform",
+        "HyphenDesk ITSM platform welcome dashboard with personalized widgets and quick actions",
     },
     problemStatement:
       "Organizations struggle with inefficient support ticket management, leading to delayed responses, missed SLAs, and poor customer satisfaction. Manual ticket routing, lack of automation, and disconnected systems create bottlenecks that impact both support teams and end users seeking assistance.",
@@ -63,41 +64,45 @@ const HyphenDeskPreview = () => {
       "HyphenDesk integrates comprehensively with HyphenView through: Shared authentication and user directory enabling seamless access across all platform modules, integration with Reporting Console for detailed ticket analytics and custom support reports, access to centralized asset data from Inventory Management for equipment-related support tickets, unified notification system that works across all HyphenView modules, and API-based ticket creation allowing other modules to generate support requests automatically.",
     screenshots: [
       {
-        src: "/Hyphen_Screenshots/Hyphen_Recent_Alerts.png",
-        alt: "Recent Alerts Dashboard",
-        caption:
-          "Real-time alert monitoring and management within the HyphenView platform (HyphenDesk module)",
+        src: "/Hyphendesk_Screenshots/Hyphndesk_login_page_dark.png",
+        alt: "HyphenDesk Login Page",
+        caption: "Secure login with multi-factor authentication and dark theme support"
       },
       {
-        src: "/Hyphen_Screenshots/Hyphen_View_Alert_Details_Page.png",
-        alt: "Alert Details View",
-        caption:
-          "Comprehensive alert details with resolution tracking and assignment management (HyphenDesk module)",
+        src: "/Hyphendesk_Screenshots/Hyphendesk_list_of_incidents.png",
+        alt: "Incident Management List",
+        caption: "Comprehensive incident tracking with advanced filtering and bulk operations"
       },
       {
-        src: "/Hyphen_Screenshots/Hyphen_Report_Scheduler_Form.png",
-        alt: "Automated Scheduling System",
-        caption:
-          "Automated alert and notification scheduling integrated with HyphenDesk ticketing system",
+        src: "/Hyphendesk_Screenshots/Hyphndesk_create_new_incident.png",
+        alt: "Create New Incident",
+        caption: "Incident creation form with attachments and automated routing"
       },
       {
-        src: "/Hyphen_Screenshots/Hyphen_Assigning_Users_To_Group.png",
-        alt: "User Assignment Management",
-        caption:
-          "Intelligent user and agent assignment system for optimal ticket distribution (HyphenDesk module)",
+        src: "/Hyphendesk_Screenshots/Hyphndesk_asset_overview_page_Dark.png",
+        alt: "Asset Management Overview",
+        caption: "Complete IT asset lifecycle management with CI tracking"
       },
       {
-        src: "/Hyphen_Screenshots/Hyphen_Group_Management.png",
-        alt: "Group-Based Ticket Management",
-        caption:
-          "Advanced group management for organizing support teams and ticket categories (HyphenDesk module)",
+        src: "/Hyphendesk_Screenshots/Hyphndesk_list_of_user_accounts.png",
+        alt: "User Management",
+        caption: "User account management with RBAC and organizational hierarchy"
       },
       {
-        src: "/Hyphen_Screenshots/Hyphen_User_Management.png",
-        alt: "Support Team Management",
-        caption:
-          "Comprehensive user management system for support agents and administrators (HyphenDesk module)",
+        src: "/Hyphendesk_Screenshots/Hyphndesk_priority_matrix.png",
+        alt: "Priority Matrix",
+        caption: "Impact vs. Urgency priority calculation matrix"
       },
+      {
+        src: "/Hyphendesk_Screenshots/Hyphndesk_view_workflow.png",
+        alt: "Workflow Visualization",
+        caption: "Visual workflow designer with automated routing and approval processes"
+      },
+      {
+        src: "/Hyphendesk_Screenshots/Hyphndesk_list_of_services.png",
+        alt: "Service Management",
+        caption: "Service catalog with SLA management and service subcategories"
+      }
     ],
 
     relatedProjects: [
