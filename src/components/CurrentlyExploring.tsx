@@ -9,15 +9,15 @@ const items = [
 ];
 
 export const CurrentlyExploring = () => (
-  <section className="py-20 px-6 bg-background border-t border-border">
-    <div className="max-w-5xl mx-auto">
+  <section className="py-24 bg-background border-t border-white/10">
+    <div className="shell-container">
       <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-6">
         Currently Exploring
       </p>
       <div className="flex flex-wrap gap-2">
         {items.map((item, i) => (
           <span key={i}
-            className="px-3.5 py-1.5 text-[13px] text-muted-foreground border border-border rounded-full
+            className="px-3.5 py-1.5 text-[13px] text-muted-foreground border border-white/10 rounded-full
               hover:border-foreground/25 hover:text-foreground transition-base cursor-default">
             {item}
           </span>

@@ -38,12 +38,12 @@ export const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-200 ${
+    <nav className={`fixed top-0 w-full z-50 transition-base ${
       scrolled
-        ? "bg-background/90 backdrop-blur-xl border-b border-border"
+        ? "bg-background/92 backdrop-blur-xl border-b border-white/10 dark:border-white/10"
         : "bg-transparent"
     }`}>
-      <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-14">
+      <div className="shell-container flex items-center justify-between h-16">
 
         {/* Wordmark */}
         <span className="text-sm font-semibold tracking-tight text-foreground select-none">
@@ -68,7 +68,7 @@ export const Navigation = () => {
           <button
             onClick={toggleDark}
             aria-label="Toggle theme"
-            className="p-1.5 text-muted-foreground hover:text-foreground transition-base rounded"
+            className="p-1.5 text-muted-foreground hover:text-foreground transition-base rounded border border-transparent hover:border-white/10"
           >
             {dark ? <Sun size={16} /> : <Moon size={16} />}
           </button>
@@ -87,7 +87,7 @@ export const Navigation = () => {
             {dark ? <Sun size={16} /> : <Moon size={16} />}
           </button>
           <button onClick={() => setIsOpen(!isOpen)}
-            className="p-1.5 text-foreground transition-base">
+            className="p-1.5 text-foreground transition-base border border-transparent rounded hover:border-white/10">
             {isOpen ? <X size={18} /> : <Menu size={18} />}
           </button>
         </div>
@@ -95,8 +95,8 @@ export const Navigation = () => {
 
       {/* Mobile drawer */}
       {isOpen && (
-        <div className="md:hidden bg-background border-t border-border">
-          <div className="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-1">
+        <div className="md:hidden bg-background border-t border-white/10">
+          <div className="shell-container py-4 flex flex-col gap-1">
             {navItems.map(item => (
               <button key={item.href} onClick={() => scrollTo(item.href)}
                 className="text-left py-2 text-sm text-muted-foreground hover:text-foreground transition-base">

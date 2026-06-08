@@ -31,15 +31,15 @@ const stack = [
 ];
 
 export const Experience = () => (
-  <section id="experience" className="py-28 px-6 bg-card">
-    <div className="max-w-5xl mx-auto">
+  <section id="experience" className="py-32 bg-card">
+    <div className="shell-container">
 
       <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-6">
         Experience
       </p>
 
       {/* Single role card */}
-      <div className="border border-border rounded-lg p-8 md:p-10">
+      <div className="border border-white/10 rounded-lg p-8 md:p-10">
 
         {/* Role header */}
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-8">
@@ -56,21 +56,21 @@ export const Experience = () => (
         <ul className="space-y-3.5 mb-10">
           {bullets.map((b, i) => (
             <li key={i} className="flex items-start gap-3.5">
-              <span className="mt-[10px] w-[3px] h-[3px] rounded-full bg-[#3b82f6] flex-shrink-0" />
+              <span className="mt-[10px] w-[3px] h-[3px] rounded-full bg-foreground/60 flex-shrink-0" />
               <span className="text-sm text-muted-foreground leading-relaxed">{b.text}</span>
             </li>
           ))}
         </ul>
 
         {/* Stack */}
-        <div className="border-t border-border pt-6">
+        <div className="border-t border-white/10 pt-6">
           <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-4">
             Stack
           </p>
           <div className="flex flex-wrap gap-2">
             {stack.map((t, i) => (
               <span key={i}
-                className="px-2.5 py-1 text-[12px] font-medium rounded border border-border
+                className="px-2.5 py-1 text-[12px] font-medium rounded border border-white/10
                   bg-background text-muted-foreground hover:text-foreground hover:border-foreground/20 transition-base">
                 {t}
               </span>

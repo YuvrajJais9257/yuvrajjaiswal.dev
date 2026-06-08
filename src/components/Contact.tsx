@@ -2,8 +2,8 @@ import React from "react";
 import { Github, Linkedin, Mail, MapPin, Clock, Download, ArrowRight } from "lucide-react";
 
 export const Contact = () => (
-  <section id="contact" className="py-28 px-6 bg-card border-t border-border">
-    <div className="max-w-5xl mx-auto">
+  <section id="contact" className="py-32 bg-card border-t border-white/10">
+    <div className="shell-container">
 
       <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-6">
         Contact
@@ -31,8 +31,8 @@ export const Contact = () => (
           target="_blank"
           rel="noopener noreferrer"
           download="Yuvraj_Jaiswal_AI_LLM_Engineer_Resume.pdf"
-          className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded
-            border border-border text-foreground hover:bg-muted transition-base"
+            className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded
+            border border-white/10 text-foreground hover:bg-muted transition-base"
         >
           <Download size={14} />
           Download Resume

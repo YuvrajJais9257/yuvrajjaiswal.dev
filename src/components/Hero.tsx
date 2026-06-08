@@ -2,10 +2,10 @@ import React from "react";
 import { Github, Linkedin, Mail, Download, ArrowRight } from "lucide-react";
 
 const metrics = [
-  { value: "2+",    label: "yrs production AI" },
-  { value: "65%",   label: "AI feature adoption" },
-  { value: "50+",   label: "enterprise users" },
-  { value: "80+",   label: "async APIs shipped" },
+  { value: "2+",    label: "years building production AI" },
+  { value: "65%",   label: "feature adoption at scale" },
+  { value: "50+",   label: "enterprise users served" },
+  { value: "80+",   label: "async APIs in production" },
   { value: "99.9%", label: "uptime" },
 ];
 
@@ -14,37 +14,37 @@ export const Hero = () => {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6 pt-20 pb-20">
-      <div className="max-w-5xl mx-auto w-full">
+    <section className="min-h-screen flex flex-col justify-center pt-28 pb-24">
+      <div className="shell-container">
 
         {/* Availability pill */}
         <div className="anim-fade-up anim-d1 mb-10">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-medium tracking-wide uppercase
-            border border-border text-muted-foreground">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            border border-white/10 text-muted-foreground">
+            <span className="w-1.5 h-1.5 rounded-full bg-foreground/60" />
             Open to AI/LLM · Python Backend roles
           </span>
         </div>
 
         {/* H1 — display size, dramatic */}
-        <h1 className="anim-fade-up anim-d2 text-foreground mb-5">
+        <h1 className="anim-fade-up anim-d2 text-foreground mb-6 text-center">
           Yuvraj Jaiswal
         </h1>
 
         {/* Role line */}
-        <p className="anim-fade-up anim-d3 text-lg md:text-xl font-medium text-muted-foreground mb-6 tracking-tight">
-          AI/LLM Engineer &nbsp;·&nbsp; Python Backend &nbsp;·&nbsp; RAG · Agents · FastAPI
+        <p className="anim-fade-up anim-d3 text-lg md:text-xl font-medium text-muted-foreground mb-6 tracking-tight max-w-[60ch]">
+          I build reliable AI products that turn LLM workflows into measurable business outcomes.
         </p>
 
         {/* Summary — max 68ch */}
-        <p className="anim-fade-up anim-d4 text-base text-muted-foreground leading-relaxed mb-10 max-w-[62ch]">
-          I build production AI applications with Python, FastAPI, RAG, and agentic
-          workflows. My focus is reliability, grounded outputs, and turning LLM
-          prototypes into systems real users adopt.
+        <p className="anim-fade-up anim-d4 text-base text-muted-foreground leading-relaxed mb-12 max-w-[68ch]">
+          AI/LLM Engineer with a backend foundation in Python and FastAPI. I focus on
+          grounded outputs, observability, and production constraints so AI systems stay
+          dependable after launch, not just impressive in demos.
         </p>
 
         {/* CTAs */}
-        <div className="anim-fade-up anim-d5 flex flex-wrap items-center gap-3 mb-14">
+        <div className="anim-fade-up anim-d5 flex flex-wrap items-center gap-3 mb-16">
           <button
             onClick={() => scrollTo("#projects")}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded text-sm font-semibold
@@ -59,7 +59,7 @@ export const Hero = () => {
             rel="noopener noreferrer"
             download="Yuvraj_Jaiswal_AI_LLM_Engineer_Resume.pdf"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded text-sm font-semibold
-              border border-border text-foreground hover:bg-muted transition-base"
+              border border-white/10 text-foreground hover:bg-muted transition-base"
           >
             <Download size={14} />
             Resume
@@ -84,7 +84,7 @@ export const Hero = () => {
         </div>
 
         {/* Metrics strip */}
-        <div className="anim-fade-up anim-d6 border-t border-border pt-8">
+        <div className="anim-fade-up anim-d6 border-t border-white/10 pt-8">
           <div className="flex flex-wrap gap-x-10 gap-y-5">
             {metrics.map((m, i) => (
               <div key={i}>

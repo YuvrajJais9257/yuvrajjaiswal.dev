@@ -88,7 +88,7 @@ const BrowserMockup = ({ src, alt }: { src: string; alt: string }) => (
       src={src}
       alt={alt}
       className="w-full object-cover object-top"
-      style={{ maxHeight: "320px" }}
+      style={{ maxHeight: "400px" }}
       loading="lazy"
     />
   </div>
@@ -96,12 +96,12 @@ const BrowserMockup = ({ src, alt }: { src: string; alt: string }) => (
 
 /* ─── Featured card (HyphenView) ─────────────────────────────────────────── */
 const FeaturedCard = ({ project }: { project: Project }) => (
-  <div className="group col-span-full border border-border rounded-lg overflow-hidden
+  <div className="group col-span-full border border-white/10 rounded-lg overflow-hidden
     bg-card hover:border-foreground/20 transition-base">
 
     {/* Screenshot */}
     {project.screenshot && (
-      <div className="p-4 pb-0 bg-muted/30">
+      <div className="p-4 pb-0 bg-muted/20">
         <BrowserMockup src={project.screenshot} alt={`${project.title} dashboard`} />
       </div>
     )}
@@ -131,11 +131,25 @@ const FeaturedCard = ({ project }: { project: Project }) => (
         {project.problem}
       </p>
 
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        {[
+          { label: "Adoption", value: "65%" },
+          { label: "Users", value: "50+" },
+          { label: "Endpoints", value: "40+" },
+          { label: "SQL Accuracy", value: "90%" },
+        ].map((kpi) => (
+          <div key={kpi.label} className="rounded-md border border-white/10 bg-background p-3">
+            <p className="text-lg font-semibold tracking-tight text-foreground">{kpi.value}</p>
+            <p className="text-[11px] uppercase tracking-wide text-muted-foreground">{kpi.label}</p>
+          </div>
+        ))}
+      </div>
+
       {/* Outcomes — 2-col grid on md */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-8">
         {project.outcomes.map((o, i) => (
           <div key={i} className="flex items-start gap-2.5">
-            <span className="mt-[9px] w-[3px] h-[3px] rounded-full bg-[#3b82f6] flex-shrink-0" />
+            <span className="mt-[9px] w-[3px] h-[3px] rounded-full bg-foreground/60 flex-shrink-0" />
             <span className="text-sm text-muted-foreground">{o}</span>
           </div>
         ))}
@@ -145,7 +159,7 @@ const FeaturedCard = ({ project }: { project: Project }) => (
       <div className="flex flex-wrap gap-1.5">
         {project.stack.map((t, i) => (
           <span key={i}
-            className="px-2.5 py-1 text-[12px] font-medium rounded border border-border
+            className="px-2.5 py-1 text-[12px] font-medium rounded border border-white/10
               bg-background text-muted-foreground">
             {t}
           </span>
@@ -157,7 +171,7 @@ const FeaturedCard = ({ project }: { project: Project }) => (
 
 /* ─── Regular bento card ─────────────────────────────────────────────────── */
 const BentoCard = ({ project }: { project: Project }) => (
-  <div className="group flex flex-col border border-border rounded-lg p-6 bg-card
+  <div className="group flex flex-col border border-white/10 rounded-lg p-6 bg-card
     hover:border-foreground/20 transition-base">
 
     <span className="text-[11px] font-semibold uppercase tracking-[0.1em] text-muted-foreground mb-3">
@@ -174,7 +188,7 @@ const BentoCard = ({ project }: { project: Project }) => (
     <ul className="space-y-2 mb-5">
       {project.outcomes.map((o, i) => (
         <li key={i} className="flex items-start gap-2.5">
-          <span className="mt-[9px] w-[3px] h-[3px] rounded-full bg-[#3b82f6] flex-shrink-0" />
+          <span className="mt-[9px] w-[3px] h-[3px] rounded-full bg-foreground/60 flex-shrink-0" />
           <span className="text-[13px] text-muted-foreground">{o}</span>
         </li>
       ))}
@@ -184,7 +198,7 @@ const BentoCard = ({ project }: { project: Project }) => (
     <div className="flex flex-wrap gap-1.5 mb-5">
       {project.stack.map((t, i) => (
         <span key={i}
-          className="px-2 py-0.5 text-[11px] font-medium rounded border border-border
+            className="px-2 py-0.5 text-[11px] font-medium rounded border border-white/10
             bg-background text-muted-foreground">
           {t}
         </span>
@@ -192,7 +206,7 @@ const BentoCard = ({ project }: { project: Project }) => (
     </div>
 
     {/* Actions */}
-    <div className="flex gap-4 mt-auto pt-2 border-t border-border">
+    <div className="flex gap-4 mt-auto pt-2 border-t border-white/10">
       {project.previewRoute && (
         <Link to={project.previewRoute}
           className="inline-flex items-center gap-1 text-[13px] font-medium text-muted-foreground
@@ -219,8 +233,8 @@ export const Projects = () => {
   const rest     = projects.filter(p => !p.featured);
 
   return (
-    <section id="projects" className="py-28 px-6 bg-background">
-      <div className="max-w-5xl mx-auto">
+    <section id="projects" className="py-32 bg-background">
+      <div className="shell-container">
 
         <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-6">
           Featured Projects
@@ -234,7 +248,7 @@ export const Projects = () => {
         </p>
 
         {/* Bento grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {/* Featured spans full width */}
           {featured.map((p, i) => <FeaturedCard key={i} project={p} />)}
           {/* Rest in 2-col bento */}

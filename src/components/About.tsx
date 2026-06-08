@@ -10,8 +10,8 @@ const focusAreas = [
 ];
 
 export const About = () => (
-  <section id="about" className="py-28 px-6 bg-background">
-    <div className="max-w-5xl mx-auto">
+  <section id="about" className="py-32 bg-background">
+    <div className="shell-container">
 
       {/* Label */}
       <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-6">
@@ -40,14 +40,14 @@ export const About = () => (
       </div>
 
       {/* Focus areas */}
-      <div className="border-t border-border pt-10">
+      <div className="border-t border-white/10 pt-10">
         <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-6">
           What I work on
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-12">
           {focusAreas.map((area, i) => (
             <div key={i} className="flex items-start gap-3">
-              <span className="mt-[9px] w-[3px] h-[3px] rounded-full bg-[#3b82f6] flex-shrink-0" />
+              <span className="mt-[9px] w-[3px] h-[3px] rounded-full bg-foreground/60 flex-shrink-0" />
               <span className="text-sm text-muted-foreground">{area}</span>
             </div>
           ))}

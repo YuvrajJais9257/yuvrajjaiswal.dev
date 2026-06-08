@@ -2,8 +2,8 @@ import React from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 export const Footer = () => (
-  <footer className="py-8 px-6 bg-background border-t border-border">
-    <div className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+  <footer className="py-8 bg-background border-t border-white/10">
+    <div className="shell-container flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
       <div>
         <p className="text-[13px] text-muted-foreground">
           © 2025 Yuvraj Jaiswal · AI/LLM Engineer
