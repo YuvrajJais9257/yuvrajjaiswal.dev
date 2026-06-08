@@ -113,8 +113,19 @@
   }
 
   /* Strict type scale */
-  h1 { font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.02; }
-  h2 { font-size: clamp(1.5rem, 3vw, 2rem);   font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; }
+  h1 {
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: clamp(2.6rem, 5.5vw, 4.25rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+  h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
   h3 { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.01em; }
   p  { font-size: 1rem; line-height: 1.7; max-width: 70ch; }
 }
@@ -139,33 +150,104 @@
   }
 }
 
-/* ─── Animations ─────────────────────────────────────────────────────────── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(12px); }
+/* ─── Animations (purposeful, minimal) ───────────────────────────────────── */
+
+/* Hero: headline + CTAs only — everything else loads visible */
+@keyframes heroEnter {
+  from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+.anim-hero-title {
+  animation: heroEnter 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.anim-fade-up {
-  animation: fadeUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  opacity: 0;
+.anim-hero-cta {
+  animation: heroEnter 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
 }
 
-.anim-fade-in {
-  animation: fadeIn 0.4s ease forwards;
-  opacity: 0;
+@media (prefers-reduced-motion: reduce) {
+  .anim-hero-title,
+  .anim-hero-cta {
+    animation: none;
+  }
 }
 
-.anim-d1 { animation-delay: 0.05s; }
-.anim-d2 { animation-delay: 0.12s; }
-.anim-d3 { animation-delay: 0.20s; }
-.anim-d4 { animation-delay: 0.28s; }
-.anim-d5 { animation-delay: 0.36s; }
-.anim-d6 { animation-delay: 0.44s; }
+/* Scroll reveal for credibility sections */
+.reveal-on-scroll {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Restrained hero background accent */
+.hero-accent {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-accent::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: min(520px, 70vw);
+  height: min(520px, 70vw);
+  border-radius: 50%;
+  background: radial-gradient(circle, hsl(var(--accent) / 0.07) 0%, transparent 68%);
+}
+
+.hero-accent::after {
+  content: "";
+  position: absolute;
+  bottom: 10%;
+  left: -5%;
+  width: min(360px, 50vw);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
+  opacity: 0.9;
+}
+
+/* Project card interactions */
+.card-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px -12px hsl(var(--foreground) / 0.12);
+  }
+}
+
+.project-image-reveal {
+  overflow: hidden;
+}
+
+.project-image-reveal img {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .group:hover .project-image-reveal img {
+    transform: scale(1.02);
+  }
+}
 
 /* ─── Browser mockup ─────────────────────────────────────────────────────── */
 .browser-frame {

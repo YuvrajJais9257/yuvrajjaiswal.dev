@@ -3,76 +3,80 @@ import { ProjectPreviewLayout } from "@/components/ProjectPreviewLayout";
 
 const SmartJobHunterPreview = () => {
   const projectData = {
-    title: "Smart Job Hunter - AI Search Agent",
-    subtitle: "Production-grade AI agent with tool-calling capabilities",
-    description: "Built production-grade AI agent with tool-calling capabilities to fetch live job postings via Tavily API. Implemented resume-aware filtering logic where LLM analyzes candidate skills against job requirements. Demonstrates advanced agent design with structured reasoning, explainable matches, and multi-step workflows.",
-    status: "🤖 AI/ML Project - Production Ready",
-    
+    title: "Smart Job Hunter — Autonomous LLM Multi-Agent System",
+    subtitle: "LangGraph ReAct agent with tool-calling and embedding-based skill matching",
+    description:
+      "Architected a LangGraph-powered autonomous agent using a ReAct loop with tool-calling to search live job listings, extract structured data, score role fit, and rank results by relevance. Custom LangChain tools parse JDs and match skills via ChromaDB embeddings, with an async Redis job queue for non-blocking multi-step workflows.",
+    status: "Personal project · LangGraph multi-agent",
+
     heroImage: {
       src: "/Ai_smart_Job_hunter.png",
-      alt: "Smart Job Hunter AI Agent Interface",
-      caption: "AI-powered job search interface with resume analysis and intelligent matching capabilities"
+      alt: "Smart Job Hunter agent interface",
+      caption: "Autonomous job search agent with explainable ranking",
     },
-    
+
     techStack: [
       "Python",
-      "Streamlit", 
-      "LangChain AgentExecutor",
-      "Tavily API",
-      "Groq",
-      "LLaMA-3"
+      "FastAPI",
+      "LangGraph",
+      "LangChain",
+      "OpenAI",
+      "Redis",
+      "ChromaDB",
+      "Docker",
     ],
-    
+
     keyFeatures: [
-      "AI Agent with Tool-Calling capabilities using LangChain AgentExecutor",
-      "Resume-aware filtering with LLM skill analysis against job requirements", 
-      "Structured reasoning with explainable decision-making process",
-      "Multi-step workflows for comprehensive job search automation",
-      "Live job data retrieval via Tavily API integration",
-      "Explainable matches with detailed recommendation explanations"
+      "LangGraph ReAct loop with tool-calling for search, parse, score, and rank",
+      "Embedding-based skill matching against a ChromaDB vector store",
+      "Async Redis job queue for multi-step workflows without API blocking",
+      "Pytest integration tests covering all tool-calling paths and state transitions",
+      "Documented agent architecture and full tool registry with API specs",
     ],
-    
+
     impactMetrics: [
-      { icon: "🤖", value: "LLaMA-3", label: "AI Model Used" },
-      { icon: "🔗", value: "Tavily API", label: "Live Job Data Source" },
-      { icon: "⚡", value: "LangChain", label: "Agent Framework" },
-      { icon: "📊", value: "Streamlit", label: "Interactive Interface" }
+      { icon: "🤖", value: "LangGraph", label: "Agent orchestration" },
+      { icon: "🔗", value: "Tool-calling", label: "ReAct workflow" },
+      { icon: "⚡", value: "Redis", label: "Async job queue" },
+      { icon: "📊", value: "ChromaDB", label: "Skill embeddings" },
     ],
-    
-    problemStatement: "Job seekers often struggle with manually searching through hundreds of job postings, spending countless hours filtering through irrelevant positions that don't match their skills and experience. Traditional job search platforms lack intelligent matching and provide limited insights into why certain jobs are recommended.",
-    
-    solutionOverview: "Smart Job Hunter leverages advanced AI agent technology with LangChain AgentExecutor to automate the job search process. It uses tool-calling capabilities to fetch live job postings via Tavily API, then applies resume-aware filtering where LLM analyzes candidate skills against job requirements, providing explainable matches with structured reasoning.",
-    
-    myRole: "Designed and developed the complete AI agent system using LangChain AgentExecutor with tool-calling capabilities. Implemented the resume parsing and skill extraction logic, integrated Tavily API for live job data retrieval, and built the Streamlit interface for user interaction. Created the explainable AI system that provides transparent reasoning for job recommendations.",
-    
+
+    problemStatement:
+      "Job seekers waste hours filtering mismatched roles. Manual search lacks structured scoring and explainable fit against a candidate's actual skills.",
+
+    solutionOverview:
+      "Smart Job Hunter runs a LangGraph agent that searches listings, parses job descriptions, matches skills via embeddings, and ranks opportunities with reasoning traces — all orchestrated through a documented tool registry and tested tool-calling paths.",
+
+    myRole:
+      "Designed the LangGraph agent architecture, built custom LangChain tools for JD parsing and skill matching, implemented the Redis-backed async queue, and wrote Pytest coverage for all state transitions.",
+
     challenges: [
-      "Designed complex multi-agent workflows with proper tool selection and execution flow using LangChain AgentExecutor",
-      "Implemented intelligent resume parsing and skill extraction for accurate job matching using LLaMA-3 model",
-      "Optimized API calls and data processing for responsive user experience with Tavily API integration",
-      "Built explainable AI system that provides transparent reasoning for each job recommendation",
-      "Created structured workflow orchestration for comprehensive job search automation"
+      "Orchestrating multi-step agent flows with reliable tool selection and self-correction",
+      "Embedding-based skill matching that stays explainable for end users",
+      "Non-blocking API design via Redis for long-running agent workflows",
+      "Full test coverage across tool-calling paths and LangGraph state transitions",
     ],
-    
+
     screenshots: [
       {
         src: "/Ai_smart_Job_hunter.png",
-        alt: "Smart Job Hunter AI Agent Interface",
-        caption: "AI-powered job search interface with resume analysis and intelligent matching"
-      }
+        alt: "Smart Job Hunter agent interface",
+        caption: "Agent interface with job search and ranking",
+      },
     ],
-    
+
     relatedProjects: [
       {
-        name: "HyphenView Analytics",
-        description: "AI-powered analytics platform with LangChain integration",
-        route: "/projects/hyphenview"
+        name: "HyphenView",
+        description: "AI Text-to-SQL platform with 65% enterprise adoption",
+        route: "/projects/hyphenview",
       },
       {
-        name: "Reporting Console",
-        description: "Enterprise reporting system with AI capabilities", 
-        route: "/projects/reporting-console"
-      }
-    ]
+        name: "AI Shopping Assistant",
+        description: "Tool-using generative agent for budget-aware recommendations",
+        route: "/projects",
+      },
+    ],
   };
 
   return <ProjectPreviewLayout {...projectData} />;

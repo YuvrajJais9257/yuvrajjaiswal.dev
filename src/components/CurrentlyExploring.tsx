@@ -1,27 +1,69 @@
 import React from "react";
 
-const items = [
-  "LLM evaluation frameworks and automated quality loops",
+const exploring = [
+  "LLM evaluation frameworks and RAGAS-style quality loops",
   "Advanced agentic patterns — planning, memory, multi-agent coordination",
-  "Serverless AI deployments on AWS Lambda",
+  "Pinecone and managed vector search at scale",
+  "AWS Bedrock for model routing and cost optimisation",
   "Streaming architectures for real-time LLM responses",
-  "Open-source contributions to AI tooling",
+];
+
+const education = {
+  degree: "B.Tech in Computer Science — AI Specialization",
+  school: "Galgotias College of Engineering and Technology, Noida",
+  years: "2020 – 2025",
+};
+
+const certifications = [
+  "AI / LangChain & Agentic AI — Udemy (RAG, LangGraph, Prompt Engineering)",
+  "Docker Mastery — Bret Fisher (Udemy)",
+  "100 Days of Code — Python — Angela Yu",
+  "Data Structures & Algorithms — Coding Ninjas",
+  "Full Stack Web Development — Hitesh Choudhary",
 ];
 
 export const CurrentlyExploring = () => (
-  <section className="py-24 bg-background border-t border-white/10">
+  <section id="background" className="py-32 bg-background border-t border-border">
     <div className="shell-container">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-6">
-        Currently Exploring
-      </p>
-      <div className="flex flex-wrap gap-2">
-        {items.map((item, i) => (
-          <span key={i}
-            className="px-3.5 py-1.5 text-[13px] text-muted-foreground border border-white/10 rounded-full
-              hover:border-foreground/25 hover:text-foreground transition-base cursor-default">
-            {item}
-          </span>
-        ))}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-6">
+            Currently Exploring
+          </p>
+          <ul className="space-y-3">
+            {exploring.map((item) => (
+              <li key={item} className="flex items-start gap-3">
+                <span className="mt-[9px] w-[3px] h-[3px] rounded-full bg-foreground/60 flex-shrink-0" aria-hidden="true" />
+                <span className="text-sm text-muted-foreground">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="space-y-12">
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-4">
+              Education
+            </p>
+            <h3 className="text-foreground font-semibold text-base mb-1">{education.degree}</h3>
+            <p className="text-sm text-muted-foreground">{education.school}</p>
+            <p className="text-sm text-muted-foreground mt-1">{education.years}</p>
+          </div>
+
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-4">
+              Certifications
+            </p>
+            <ul className="space-y-2.5">
+              {certifications.map((cert) => (
+                <li key={cert} className="text-sm text-muted-foreground leading-relaxed">
+                  {cert}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
