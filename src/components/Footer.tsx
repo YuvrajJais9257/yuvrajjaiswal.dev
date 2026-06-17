@@ -6,7 +6,7 @@ export const Footer = () => (
     <div className="shell-container flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
       <div>
         <p className="text-[13px] text-muted-foreground">
-          © 2026 Yuvraj Jaiswal · AI / LLM Engineer
+          © 2026 Yuvraj Jaiswal · AI / LLM Engineer · Python Backend
         </p>
         <p className="text-[11px] text-muted-foreground mt-1 max-w-sm">
           Screenshots from UAT/demo environments — portfolio purposes only.

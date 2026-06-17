@@ -3,17 +3,17 @@ import { ProjectPreviewLayout } from "@/components/ProjectPreviewLayout";
 
 const HyphenViewPreview = () => {
   const projectData = {
-    title: "HyphenView - Enterprise Application Platform",
-    description: "Unified enterprise platform integrating reporting console, inventory management, and support ticketing modules",
-    status: "🔧 Production Application - Currently Under Maintenance",
-    techStack: ["React.js", "Redux Toolkit", "FastAPI", "PostgreSQL", "Microservices Architecture", "Docker", "Nginx"],
+    title: "HyphenView — AI Text-to-SQL Analytics Platform",
+    description: "Enterprise AI analytics platform enabling natural language database queries — adopted by 50+ users with 65% Q1 adoption",
+    status: "Production · Erasmith · Private NDA Repository",
+    techStack: ["React.js", "FastAPI", "PostgreSQL", "LangChain", "GPT-4o", "ChromaDB", "Docker", "AWS S3"],
     heroImage: {
       src: "/Hyphen_Screenshots/Hyphen_Dashboard.png",
       alt: "HyphenView Main Dashboard",
       caption: "Main HyphenView dashboard showing integrated modules and unified navigation"
     },
-    problemStatement: "Organizations often struggle with fragmented systems where reporting, inventory management, and support ticketing operate in silos. This leads to data inconsistencies, duplicate user management, and poor user experience as employees need to switch between multiple applications.",
-    solutionOverview: "HyphenView serves as a unified enterprise platform that integrates multiple business applications under a single interface. It provides centralized authentication, shared data models, and seamless navigation between modules while maintaining the specialized functionality of each sub-application.",
+    problemStatement: "Business users needed database insights without writing SQL. Manual reporting created bottlenecks and required technical staff for every ad-hoc query at enterprise scale.",
+    solutionOverview: "HyphenView is an AI-powered Text-to-SQL analytics platform built with FastAPI, PostgreSQL, and LangChain. Multi-stage prompt engineering handles SQL generation, validation, and result formatting — enabling 50+ enterprise users to query databases using natural language.",
     keyFeatures: [
       "Modular architecture with integrated sub-applications",
       "Centralized user authentication and authorization system",
@@ -27,12 +27,12 @@ const HyphenViewPreview = () => {
       "Scalable microservices architecture"
     ],
     impactMetrics: [
-      { icon: "🎯", value: "100+", label: "Active Users" },
-      { icon: "🔗", value: "3", label: "Integrated Sub-Applications" },
-      { icon: "⚡", value: "Single", label: "Sign-On Experience" },
-      { icon: "📊", value: "Unified", label: "Analytics Dashboard" }
+      { icon: "📊", value: "65%", label: "Q1 Adoption Rate" },
+      { icon: "👥", value: "50+", label: "Enterprise Users" },
+      { icon: "🔗", value: "80+", label: "REST APIs Built" },
+      { icon: "⚡", value: "45%", label: "Dashboard Load Improvement" }
     ],
-    myRole: "Architected the parent HyphenView platform to serve as a unified hub for multiple enterprise applications. Designed the modular architecture, implemented SSO authentication system, and built the integration layer connecting all sub-applications. Led frontend development using React and Redux Toolkit, created the centralized state management system, and established the API gateway pattern for inter-module communication.",
+    myRole: "Built HyphenView as the flagship AI product at Erasmith — designed the LangChain Text-to-SQL pipeline, FastAPI backend with 80+ REST endpoints, PostgreSQL schema and query optimization, React frontend, and Docker deployment. Achieved 65% adoption among 50+ enterprise users within the first quarter after launch. Repository is private under NDA.",
     screenshots: [
       {
         src: "/Hyphen_Screenshots/Hyphen_Switch_To_Reporting_Console.png",

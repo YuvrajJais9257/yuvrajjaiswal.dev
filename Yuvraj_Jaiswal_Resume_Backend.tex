@@ -1,0 +1,292 @@
+%-------------------------
+% Resume in Latex — Python Backend + AI Engineer variant
+% Author : Harshibar
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey} \small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Yuvraj Jaiswal} \\ \vspace{5pt}
+
+    \small
+    \faPhone* \ +91-7838379576 \hspace{2pt} $|$
+    \hspace{2pt}
+    \faEnvelope \ yuvraj8257@gmail.com \hspace{2pt} $|$
+    \hspace{2pt}
+    \faGithub \href{https://github.com/YuvrajJais9257}{GitHub} \hspace{2pt} $|$
+    \hspace{2pt}
+    \faLinkedin \href{https://www.linkedin.com/in/yuvraj-jaiswal-65ab5a217}{LinkedIn} \hspace{2pt} $|$
+    \hspace{2pt}
+    \faGlobe \href{https://yuvrajjaiswal.dev}{yuvrajjaiswal.dev}
+
+    \\ \vspace{4pt}
+
+    {\large Python Backend Engineer | AI Engineer | FastAPI | PostgreSQL | REST APIs}
+\end{center}
+
+
+%-----------SUMMARY-----------
+\section{SUMMARY}
+
+Python Backend Engineer with 2+ years of production experience designing scalable REST APIs, PostgreSQL-backed services, and full-stack web applications using FastAPI, React, Redis, Docker, and AWS. Built 80+ API endpoints, optimized database performance by 45\%, and integrated LLM capabilities into enterprise products including HyphenView (50+ users). Strong in microservices, authentication, RBAC, and AI feature integration with LangChain and OpenAI. Open to relocation pan-India.
+
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Erasmith Pvt Ltd}{Feb 2024 -- Present}
+{Python Backend Engineer / AI Engineer}{Noida, India}
+
+\resumeItemListStart
+
+\resumeItem{Developed and maintained 80+ REST APIs using FastAPI for analytics, workflow automation, authentication, and AI-powered enterprise features.}
+
+\resumeItem{Designed PostgreSQL schemas, query layers, and backend services; optimized queries and workflows, reducing dashboard load times by 45\%.}
+
+\resumeItem{Built \textbf{HyphenView}, a FastAPI + PostgreSQL analytics platform with natural language querying; adopted by 50+ enterprise users with 65\% adoption in the first quarter.}
+
+\resumeItem{Implemented JWT authentication, RBAC authorization, Redis caching, structured logging, and async request handling for production deployments.}
+
+\resumeItem{Built a FastAPI microservice for productivity analytics, KPI tracking, ownership assignment, and deadline alerts integrated with the internal React portal.}
+
+\resumeItem{Integrated OpenAI and Claude APIs into backend services; built RAG pipelines with LangChain, ChromaDB, and FAISS for document search and NLP features.}
+
+\resumeItem{Containerized services with Docker and deployed cloud-native workloads using AWS S3 for document storage and file management.}
+
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{EraDesk (Kanvance)}}
+{\href{https://github.com/YuvrajJais9257/Kanvance}{GitHub}}
+
+\resumeItemListStart
+
+\resumeItem{Built a full-stack internal productivity platform with 5-level RBAC, Excel import pipeline, real-time availability tracking, and polymorphic document linking.}
+
+\resumeItem{Implemented React 19 frontend, FastAPI backend, PostgreSQL schema with idempotent migrations, and reporting workflows.}
+
+\resumeItemListEnd
+
+
+\resumeProjectHeading
+{\textbf{HyphenView — Text-to-SQL Analytics Platform (Erasmith)}}{Private Repo}
+
+\resumeItemListStart
+
+\resumeItem{FastAPI + PostgreSQL backend enabling business users to query databases using natural language.}
+
+\resumeItem{Designed API layers for SQL generation, validation, and result formatting with OpenAI integration and ChromaDB vector search.}
+
+\resumeItem{\textbf{Repository:} Private NDA Repository (code not publicly available)}
+
+\resumeItemListEnd
+
+
+\resumeProjectHeading
+{\textbf{AI Shopping Assistant}}
+{\href{https://github.com/YuvrajJais9257/e-comm-agent}{GitHub}}
+
+\resumeItemListStart
+
+\resumeItem{Built FastAPI backend with PostgreSQL, REST endpoints, and OpenAI-powered recommendation logic.}
+
+\resumeItem{Deployed containerized services with Docker; \textbf{Live Demo:} \href{https://e-comm-agent.vercel.app/}{e-comm-agent.vercel.app}}
+
+\resumeItemListEnd
+
+
+\resumeProjectHeading
+{\textbf{AI Job Search Agent}}
+{\href{https://github.com/YuvrajJais9257/AI-Job-Search}{GitHub}}
+
+\resumeItemListStart
+
+\resumeItem{Built async Python backend with LangGraph agent orchestration, tool-calling workflows, and embedding-based job matching.}
+
+\resumeItem{Implemented structured job scoring, vector search, and API-driven data pipelines for discovery and ranking.}
+
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Galgotias College of Engineering and Technology}{2020 -- 2025}
+{B.Tech Computer Science (AI Specialization)}{Greater Noida, India}
+\resumeItemListStart
+\resumeItem{Completed final year while working full-time as Python Backend / AI Engineer at Erasmith Pvt Ltd.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------
+\section{SKILLS}
+
+\begin{itemize}[leftmargin=0in, label={}]
+\small{\item{
+
+\textbf{Backend}: Python, FastAPI, Flask, REST APIs, AsyncIO, Microservices, Redis, JWT, RBAC, API Design
+
+\vspace{2pt}
+
+\textbf{Databases}: PostgreSQL, MySQL, MongoDB, SQL Optimization, Schema Design, Migrations
+
+\vspace{2pt}
+
+\textbf{Cloud \& DevOps}: AWS, Docker, Docker Compose, CI/CD, Git, Linux, AWS S3
+
+\vspace{2pt}
+
+\textbf{Frontend}: React.js, JavaScript, TypeScript, Redux, HTML, CSS
+
+\vspace{2pt}
+
+\textbf{AI Integration}: LangChain, LangGraph, OpenAI GPT-4o, Claude, RAG, Vector Databases, ChromaDB, FAISS, Prompt Engineering, AI Automation
+
+}}
+\end{itemize}
+
+
+%-------------------------------------------
+\end{document}

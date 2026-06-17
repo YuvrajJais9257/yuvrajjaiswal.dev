@@ -5,23 +5,24 @@ const groups = [
     id: "ai",
     title: "AI / LLM & Agents",
     skills: [
-      "LangChain", "LangGraph", "GPT-4o", "Claude", "Agentic Workflows",
-      "ReAct Loop", "Tool-Calling", "Prompt Engineering", "Output Parsing",
+      "LangChain", "LangGraph", "GPT-4o", "Claude", "Agentic AI", "AI Agents",
+      "Tool Calling", "Function Calling", "Prompt Engineering", "MCP",
+      "LLM Evaluation", "AI Automation",
     ],
   },
   {
     id: "rag",
     title: "RAG & Vector Search",
     skills: [
-      "FAISS", "ChromaDB", "Hybrid Retrieval", "Chunking Strategy",
-      "text-embedding-ada-002", "RAGAS Evaluation",
+      "RAG", "Vector Databases", "FAISS", "ChromaDB",
+      "Hybrid Retrieval", "Chunking Strategy", "Embeddings",
     ],
   },
   {
     id: "backend",
     title: "Backend & APIs",
     skills: [
-      "Python", "FastAPI", "Flask", "Asyncio", "REST APIs",
+      "Python", "FastAPI", "Flask", "AsyncIO", "REST APIs", "Microservices",
       "JWT", "RBAC", "Redis", "Pydantic", "Structured Logging",
     ],
   },
@@ -29,14 +30,14 @@ const groups = [
     id: "cloud",
     title: "Cloud & Data",
     skills: [
-      "AWS ECS", "S3", "Lambda", "DynamoDB", "CloudWatch",
-      "PostgreSQL", "MongoDB", "Docker", "CI/CD", "Nginx",
+      "AWS", "AWS S3", "Docker", "Docker Compose", "CI/CD", "Git", "Linux",
+      "PostgreSQL", "MySQL", "MongoDB", "SQL Optimization",
     ],
   },
   {
     id: "frontend",
     title: "Frontend",
-    skills: ["React.js", "Next.js", "TypeScript", "Redux", "Tailwind CSS"],
+    skills: ["React.js", "TypeScript", "JavaScript", "Redux", "Tailwind CSS", "HTML", "CSS"],
   },
   {
     id: "languages",
@@ -68,10 +69,10 @@ export const Skills = () => {
         <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-6">
           Skills
         </p>
-        <h2 className="text-foreground mb-3">Curated for backend & AI roles</h2>
+        <h2 className="text-foreground mb-3">Curated for AI & backend roles</h2>
         <p className="text-base text-muted-foreground mb-8 max-w-[55ch]">
-          Grouped by relevance — filter to scan faster. No decorative motion,
-          just clarity.
+          Grouped by relevance — filter to scan faster. Keywords aligned with
+          2026 ATS trends for AI/LLM and Python backend hiring.
         </p>
 
         <div className="flex flex-wrap gap-2 mb-10" role="tablist" aria-label="Filter skills by category">

@@ -1,14 +1,14 @@
 import React from "react";
 import { Github, Linkedin, Mail, Download, ArrowRight } from "lucide-react";
 
-const RESUME_PATH = "/Yuvraj_Jaiswal_AI_LLM_Engineer.pdf";
+const RESUME_PATH = "/Yuvraj_Jaiswal_Python_Backend_Engineer.pdf";
 
 const metrics = [
-  { value: "~3 yrs", label: "production AI & backend" },
+  { value: "2+ yrs", label: "production AI & backend" },
   { value: "65%", label: "HyphenView adoption (Q1)" },
   { value: "50+", label: "enterprise users served" },
-  { value: "80+", label: "async APIs in production" },
-  { value: "99.9%", label: "uptime on ECS deploys" },
+  { value: "80+", label: "REST APIs in production" },
+  { value: "45%", label: "dashboard load improvement" },
 ];
 
 export const Hero = () => {
@@ -24,12 +24,12 @@ export const Hero = () => {
         <div className="mb-10">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-medium tracking-wide uppercase border border-border text-muted-foreground">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" aria-hidden="true" />
-            Open to Python backend, AI application & full-stack roles
+            Open to AI/LLM, Python backend & full-stack roles · pan-India relocation
           </span>
         </div>
 
         <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground mb-4">
-          AI / LLM Engineer · Agentic Systems · RAG · Full Stack
+          AI / LLM Engineer · Python Backend · Agentic AI · RAG · FastAPI
         </p>
 
         <h1 className="anim-hero-title text-foreground mb-6">
@@ -37,14 +37,15 @@ export const Hero = () => {
         </h1>
 
         <p className="text-lg md:text-xl font-medium text-foreground/90 mb-5 tracking-tight max-w-[62ch]">
-          I ship LangChain and LangGraph agentic systems, RAG pipelines, and
-          cloud-native Python backends that hold up after launch.
+          I ship agentic AI systems, RAG pipelines, and production FastAPI
+          backends that hold up after launch.
         </p>
 
         <p className="text-base text-muted-foreground leading-relaxed mb-12 max-w-[68ch]">
-          Almost 3 years building production LLM products — from prompt layers and
-          vector stores to FastAPI services on AWS. End-to-end ownership from model
-          integration to React frontends, with observability and cost control built in.
+          2+ years building production LLM products at Erasmith — from LangGraph
+          agents and vector stores to 80+ REST APIs on PostgreSQL and AWS.
+          Shipped HyphenView, an enterprise Text-to-SQL platform adopted by 50+
+          users. End-to-end ownership from model integration to React frontends.
         </p>
 
         <div className="anim-hero-cta flex flex-wrap items-center gap-3 mb-16">

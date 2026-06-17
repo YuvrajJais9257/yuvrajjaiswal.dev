@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
 
-const RESUME_PATH = "/Yuvraj_Jaiswal_AI_LLM_Engineer.pdf";
+const RESUME_PATH = "/Yuvraj_Jaiswal_Python_Backend_Engineer.pdf";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ExternalLink, Github, ArrowUpRight, ChevronDown } from "lucide-react";
+import { ExternalLink, Github, ArrowUpRight, ChevronDown, Lock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Reveal } from "@/components/Reveal";
 
@@ -12,32 +12,33 @@ interface Project {
   stack: string[];
   previewRoute?: string;
   githubUrl?: string;
+  liveDemoUrl?: string;
+  privateRepo?: boolean;
   featured?: boolean;
   screenshot?: string;
   metrics?: { label: string; value: string }[];
 }
 
-const GITHUB = "https://github.com/YuvrajJais9257";
-
 const projects: Project[] = [
   {
     title: "HyphenView",
-    tag: "Production · AI Text-to-SQL",
+    tag: "Production · AI Text-to-SQL · Erasmith",
     featured: true,
+    privateRepo: true,
     screenshot: "/Hyphen_Screenshots/Hyphen_Dashboard.png",
     problem:
       "Business users needed database insights without writing SQL — at enterprise scale, with security and accuracy requirements.",
     built:
-      "Multi-stage LangChain pipeline: schema-aware prompts → GPT-4o SQL generation → validation → formatting, with error-correction loops. ChromaDB for schema embeddings and few-shot examples; assets in S3 with signed URLs.",
+      "Multi-stage LangChain pipeline: schema-aware prompts → GPT-4o SQL generation → validation → formatting, with error-correction loops. ChromaDB for schema embeddings; FastAPI + PostgreSQL backend with Docker deployment.",
     outcomes: [
       "65% adoption among 50+ enterprise users within Q1 post-launch",
       "React frontend with real-time query feedback and result visualisation",
-      "Deployed on AWS ECS via Docker, Nginx, and CloudWatch logging",
+      "Private NDA repository — enterprise code not publicly available",
     ],
     metrics: [
       { label: "Adoption", value: "65%" },
       { label: "Users", value: "50+" },
-      { label: "Stack", value: "ECS" },
+      { label: "APIs", value: "80+" },
       { label: "Pipeline", value: "Multi-stage" },
     ],
     stack: [
@@ -45,41 +46,58 @@ const projects: Project[] = [
       "ChromaDB", "AWS S3", "Docker", "React.js",
     ],
     previewRoute: "/projects/hyphenview",
-    githubUrl: GITHUB,
   },
   {
-    title: "Smart Job Hunter",
+    title: "EraDesk (Kanvance)",
+    tag: "Personal · Full-Stack Productivity",
+    problem:
+      "Teams needed a unified internal platform for workflow management, role-based access, Excel data imports, and activity tracking across departments.",
+    built:
+      "Full-stack productivity platform with 5-level RBAC, Excel import pipeline, real-time availability tracking, polymorphic document linking, and idempotent PostgreSQL migrations.",
+    outcomes: [
+      "React 19 frontend with FastAPI backend and PostgreSQL reporting workflows",
+      "5-level RBAC with granular permission control across modules",
+      "Excel import pipeline with validation and bulk data processing",
+    ],
+    stack: [
+      "React 19", "FastAPI", "PostgreSQL", "RBAC", "Excel Pipeline", "TypeScript",
+    ],
+    githubUrl: "https://github.com/YuvrajJais9257/Kanvance",
+  },
+  {
+    title: "AI Job Search Agent",
     tag: "Personal · LangGraph Multi-Agent",
     problem:
       "Job seekers waste time on mismatched listings. Needed an autonomous agent to search live postings, score fit, and rank with explainable reasoning.",
     built:
-      "LangGraph ReAct agent with tool-calling to search listings, parse JDs, and match skills via ChromaDB embeddings. Async Redis job queue for multi-step workflows; Pytest coverage on all tool paths.",
+      "LangGraph agent with tool-calling to discover listings, parse JDs, and match skills via ChromaDB embeddings. Async workflows with structured job scoring for relevance ranking.",
     outcomes: [
-      "Custom LangChain tools for JD parsing and embedding-based skill matching",
-      "Documented agent architecture and full tool registry with API specs",
-      "Non-blocking multi-step flows via Redis-backed job queue",
+      "LangGraph-powered autonomous agent for job discovery and ranking",
+      "Tool-calling workflows with vector search and embedding-based matching",
+      "Async Python backend with structured job scoring pipelines",
     ],
     stack: [
       "Python", "FastAPI", "LangGraph", "LangChain", "OpenAI",
       "Redis", "ChromaDB", "Docker",
     ],
     previewRoute: "/projects/smart-job-hunter",
-    githubUrl: GITHUB,
+    githubUrl: "https://github.com/YuvrajJais9257/AI-Job-Search",
   },
   {
     title: "AI Shopping Assistant",
-    tag: "Personal · Tool-Using Agent",
+    tag: "Personal · Tool-Using Agent · Live Demo",
     problem:
       "Shoppers need budget-aware recommendations across product categories — combining deterministic constraints with LLM reasoning and live product data.",
     built:
-      "Tool-using generative agent via LangChain's tool-calling interface: intent + budget in, product API search, comparison, and ranked recommendations with reasoning traces out.",
+      "Tool-using AI assistant via LangChain tool-calling: intent + budget in, product search, comparison, and ranked recommendations out. FastAPI + PostgreSQL backend with Docker deployment.",
     outcomes: [
-      "Product catalogs and session state in PostgreSQL with connection pooling",
+      "Live deployed demo on Vercel — click to try the assistant",
+      "Product catalogs and session state in PostgreSQL",
       "Structured tool registry for search, compare, and rank operations",
-      "Deployed via Docker Compose for local and demo environments",
     ],
     stack: ["Python", "FastAPI", "LangChain", "OpenAI", "PostgreSQL", "Docker"],
-    githubUrl: GITHUB,
+    githubUrl: "https://github.com/YuvrajJais9257/e-comm-agent",
+    liveDemoUrl: "https://e-comm-agent.vercel.app/",
   },
 ];
 
@@ -103,6 +121,47 @@ const BrowserMockup = ({ src, alt }: { src: string; alt: string }) => (
   </div>
 );
 
+const ProjectLinks = ({ project }: { project: Project }) => (
+  <div className="flex gap-3 flex-shrink-0 flex-wrap">
+    {project.previewRoute && (
+      <Link
+        to={project.previewRoute}
+        className="inline-flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold rounded bg-accent text-accent-foreground hover:opacity-90 transition-base"
+      >
+        Case Study
+        <ArrowUpRight size={13} aria-hidden="true" />
+      </Link>
+    )}
+    {project.liveDemoUrl && (
+      <a
+        href={project.liveDemoUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold rounded bg-accent text-accent-foreground hover:opacity-90 transition-base"
+      >
+        Live Demo
+        <ExternalLink size={13} aria-hidden="true" />
+      </a>
+    )}
+    {project.privateRepo ? (
+      <span className="inline-flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold rounded border border-border text-muted-foreground">
+        <Lock size={13} aria-hidden="true" />
+        Private NDA Repo
+      </span>
+    ) : project.githubUrl ? (
+      <a
+        href={project.githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold rounded border border-border text-foreground hover:bg-muted transition-base"
+      >
+        <Github size={13} aria-hidden="true" />
+        GitHub
+      </a>
+    ) : null}
+  </div>
+);
+
 const FeaturedCard = ({ project }: { project: Project }) => (
   <article className="group col-span-full border border-border rounded-lg overflow-hidden bg-card card-lift hover:border-foreground/20">
     {project.screenshot && (
@@ -119,28 +178,7 @@ const FeaturedCard = ({ project }: { project: Project }) => (
           </span>
           <h3 className="text-foreground text-xl font-semibold">{project.title}</h3>
         </div>
-        <div className="flex gap-3 flex-shrink-0">
-          {project.previewRoute && (
-            <Link
-              to={project.previewRoute}
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold rounded bg-accent text-accent-foreground hover:opacity-90 transition-base"
-            >
-              Case Study
-              <ArrowUpRight size={13} aria-hidden="true" />
-            </Link>
-          )}
-          {project.githubUrl && (
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold rounded border border-border text-foreground hover:bg-muted transition-base"
-            >
-              <Github size={13} aria-hidden="true" />
-              GitHub
-            </a>
-          )}
-        </div>
+        <ProjectLinks project={project} />
       </div>
 
       <p className="text-sm text-muted-foreground leading-relaxed mb-4 max-w-[65ch]">
@@ -254,7 +292,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         />
       </button>
 
-      <div className="flex gap-4 mt-auto pt-2 border-t border-border">
+      <div className="flex flex-wrap gap-4 mt-auto pt-2 border-t border-border">
         {project.previewRoute && (
           <Link
             to={project.previewRoute}
@@ -264,7 +302,23 @@ const ProjectCard = ({ project }: { project: Project }) => {
             Case Study
           </Link>
         )}
-        {project.githubUrl && (
+        {project.liveDemoUrl && (
+          <a
+            href={project.liveDemoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-[13px] font-medium text-accent hover:opacity-80 transition-base"
+          >
+            <ExternalLink size={12} aria-hidden="true" />
+            Live Demo
+          </a>
+        )}
+        {project.privateRepo ? (
+          <span className="inline-flex items-center gap-1 text-[13px] font-medium text-muted-foreground">
+            <Lock size={12} aria-hidden="true" />
+            Private NDA Repo
+          </span>
+        ) : project.githubUrl ? (
           <a
             href={project.githubUrl}
             target="_blank"
@@ -274,7 +328,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             <Github size={12} aria-hidden="true" />
             GitHub
           </a>
-        )}
+        ) : null}
       </div>
     </article>
   );
@@ -295,8 +349,8 @@ export const Projects = () => {
           Shipped systems with business context.
         </h2>
         <p className="text-base text-muted-foreground mb-14 max-w-[58ch]">
-          Three production-grade builds — problem, ownership, and outcomes visible
-          at a glance. Expand secondary cards for full detail.
+          Four production-grade builds — problem, ownership, and outcomes visible
+          at a glance. Expand cards for full detail and GitHub links.
         </p>
 
         <Reveal>

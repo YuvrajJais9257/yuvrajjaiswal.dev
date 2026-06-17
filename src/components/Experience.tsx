@@ -2,17 +2,19 @@ import React from "react";
 import { Reveal } from "@/components/Reveal";
 
 const impactBullets = [
-  "Shipped LangGraph and LangChain multi-step agents including a production natural-language-to-SQL pipeline — 65% adoption among 50+ enterprise users in Q1 post-launch.",
-  "Built ReAct-loop agentic workflows with tool-calling, AWS S3 document storage, and Lambda triggers for serverless ingestion and inference pipelines.",
-  "Architected RAG with FAISS and ChromaDB (text-embedding-ada-002); hybrid retrieval and chunk tuning improved grounding on domain-specific production queries.",
-  "Developed 80+ async FastAPI endpoints (JWT, RBAC, Redis) at sub-200ms p95; optimised PostgreSQL from 12s to 6.6s dashboard load (45% faster).",
-  "Deployed GenAI on AWS ECS with Docker and CI/CD — 99.9% uptime across 100+ instances; CloudWatch observability for token cost, latency, and error rates.",
+  "Built HyphenView, an AI Text-to-SQL analytics platform — 65% adoption among 50+ enterprise users within Q1 post-launch.",
+  "Developed and maintained 80+ REST APIs using FastAPI for analytics, workflow automation, authentication, and AI-powered features.",
+  "Built production RAG pipelines with LangChain, LangGraph, ChromaDB, and FAISS for document intelligence and natural language querying.",
+  "Implemented JWT authentication, RBAC authorization, Redis caching, and structured logging for enterprise deployments.",
+  "Optimized PostgreSQL queries and backend workflows, reducing dashboard load times by 45%.",
+  "Built a FastAPI microservice for productivity analytics, KPI tracking, ownership assignment, and deadline alerts.",
+  "Containerized applications with Docker and integrated AWS S3 for document management and storage.",
 ];
 
 const stack = [
   "Python", "FastAPI", "LangChain", "LangGraph", "GPT-4o", "Claude",
-  "RAG", "FAISS", "ChromaDB", "PostgreSQL", "Redis", "DynamoDB",
-  "AWS ECS", "S3", "Lambda", "CloudWatch", "Docker", "React.js",
+  "RAG", "FAISS", "ChromaDB", "PostgreSQL", "Redis",
+  "AWS S3", "Docker", "React.js", "JWT", "RBAC",
 ];
 
 export const Experience = () => (

@@ -100,13 +100,13 @@ Node 18+ required.
 
 ## Featured Projects
 
-**HyphenView** — AI analytics platform. Text-to-SQL with LangChain, GPT-4, and Claude. 65% adoption across 50+ enterprise users.
+**HyphenView** — Enterprise AI Text-to-SQL platform at Erasmith. 65% adoption among 50+ users. Private NDA repository.
 
-**Smart Job Hunter** — Autonomous job search agent. LangChain AgentExecutor, LLaMA-3, Tavily API, resume-aware semantic matching.
+**EraDesk (Kanvance)** — Full-stack productivity platform with 5-level RBAC, Excel pipeline, FastAPI + PostgreSQL. [GitHub](https://github.com/YuvrajJais9257/Kanvance)
 
-**AI Budget Shopping Assistant** — Tool-calling agent with deterministic budget logic + LLM reasoning.
+**AI Job Search Agent** — LangGraph autonomous agent with tool-calling and embedding-based job matching. [GitHub](https://github.com/YuvrajJais9257/AI-Job-Search)
 
-**Personal AI Knowledge Base** — Full-stack RAG app. FastAPI + ChromaDB + streaming chat.
+**AI Shopping Assistant** — Tool-calling agent with FastAPI backend. [GitHub](https://github.com/YuvrajJais9257/e-comm-agent) · [Live Demo](https://e-comm-agent.vercel.app/)
 
 ---
 
@@ -115,7 +115,7 @@ Node 18+ required.
 - Email: [yuvraj8257@gmail.com](mailto:yuvraj8257@gmail.com)
 - LinkedIn: [yuvraj-jaiswal-65ab5a217](https://linkedin.com/in/yuvraj-jaiswal-65ab5a217)
 - GitHub: [YuvrajJais9257](https://github.com/YuvrajJais9257)
-- Location: Noida, India · Available immediately to 15 days
+- Location: Noida, India · Open to pan-India relocation
 
 ---
 

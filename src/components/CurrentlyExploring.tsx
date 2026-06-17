@@ -1,17 +1,18 @@
 import React from "react";
 
 const exploring = [
-  "LLM evaluation frameworks and RAGAS-style quality loops",
+  "MCP (Model Context Protocol) and tool-calling agent patterns",
+  "LLM evaluation frameworks and RAG quality measurement",
   "Advanced agentic patterns — planning, memory, multi-agent coordination",
-  "Pinecone and managed vector search at scale",
-  "AWS Bedrock for model routing and cost optimisation",
+  "Managed vector search and embedding optimization at scale",
   "Streaming architectures for real-time LLM responses",
 ];
 
 const education = {
   degree: "B.Tech in Computer Science — AI Specialization",
-  school: "Galgotias College of Engineering and Technology, Noida",
+  school: "Galgotias College of Engineering and Technology, Greater Noida",
   years: "2020 – 2025",
+  note: "Completed final year while working full-time as AI/LLM Engineer at Erasmith Pvt Ltd.",
 };
 
 const certifications = [
@@ -49,6 +50,7 @@ export const CurrentlyExploring = () => (
             <h3 className="text-foreground font-semibold text-base mb-1">{education.degree}</h3>
             <p className="text-sm text-muted-foreground">{education.school}</p>
             <p className="text-sm text-muted-foreground mt-1">{education.years}</p>
+            <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{education.note}</p>
           </div>
 
           <div>

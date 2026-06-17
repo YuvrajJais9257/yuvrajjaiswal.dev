@@ -3,11 +3,11 @@ import { ProjectPreviewLayout } from "@/components/ProjectPreviewLayout";
 
 const SmartJobHunterPreview = () => {
   const projectData = {
-    title: "Smart Job Hunter — Autonomous LLM Multi-Agent System",
-    subtitle: "LangGraph ReAct agent with tool-calling and embedding-based skill matching",
+    title: "AI Job Search Agent — Autonomous LLM Multi-Agent System",
+    subtitle: "LangGraph agent with tool-calling and embedding-based job matching",
     description:
-      "Architected a LangGraph-powered autonomous agent using a ReAct loop with tool-calling to search live job listings, extract structured data, score role fit, and rank results by relevance. Custom LangChain tools parse JDs and match skills via ChromaDB embeddings, with an async Redis job queue for non-blocking multi-step workflows.",
-    status: "Personal project · LangGraph multi-agent",
+      "Built a LangGraph-powered autonomous agent capable of discovering, analyzing, and ranking job opportunities. Implements tool-calling workflows, vector search, and resume-job matching using embeddings with async Python backend pipelines.",
+    status: "Personal project · LangGraph multi-agent · Open source",
 
     heroImage: {
       src: "/Ai_smart_Job_hunter.png",
@@ -45,16 +45,16 @@ const SmartJobHunterPreview = () => {
       "Job seekers waste hours filtering mismatched roles. Manual search lacks structured scoring and explainable fit against a candidate's actual skills.",
 
     solutionOverview:
-      "Smart Job Hunter runs a LangGraph agent that searches listings, parses job descriptions, matches skills via embeddings, and ranks opportunities with reasoning traces — all orchestrated through a documented tool registry and tested tool-calling paths.",
+      "AI Job Search Agent runs a LangGraph agent that discovers listings, parses job descriptions, matches skills via embeddings, and ranks opportunities with structured scoring — orchestrated through tool-calling workflows and async backend pipelines.",
 
     myRole:
-      "Designed the LangGraph agent architecture, built custom LangChain tools for JD parsing and skill matching, implemented the Redis-backed async queue, and wrote Pytest coverage for all state transitions.",
+      "Designed the LangGraph agent architecture, built custom LangChain tools for JD parsing and skill matching, implemented async job scoring pipelines, and wrote test coverage for tool-calling paths.",
 
     challenges: [
-      "Orchestrating multi-step agent flows with reliable tool selection and self-correction",
-      "Embedding-based skill matching that stays explainable for end users",
-      "Non-blocking API design via Redis for long-running agent workflows",
-      "Full test coverage across tool-calling paths and LangGraph state transitions",
+      "Orchestrating multi-step agent flows with reliable tool selection and structured outputs",
+      "Embedding-based job matching that stays explainable for end users",
+      "Async API design for long-running agent workflows",
+      "Structured job scoring to improve relevance and ranking quality",
     ],
 
     screenshots: [
@@ -73,8 +73,8 @@ const SmartJobHunterPreview = () => {
       },
       {
         name: "AI Shopping Assistant",
-        description: "Tool-using generative agent for budget-aware recommendations",
-        route: "/projects",
+        description: "Tool-using agent with live demo at e-comm-agent.vercel.app",
+        route: "/#projects",
       },
     ],
   };

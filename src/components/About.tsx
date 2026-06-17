@@ -1,12 +1,12 @@
 import React from "react";
 
 const focusAreas = [
-  "LangGraph & LangChain multi-step agents — ReAct loops, tool-calling, self-correction",
-  "RAG pipelines — chunking, hybrid retrieval, FAISS/ChromaDB, S3 + Lambda ingestion",
-  "Production LLM layers — GPT-4o, Claude, schema-aware prompts, structured outputs",
-  "Async FastAPI backends — JWT, RBAC, Redis, Pydantic, sub-200ms p95 under load",
-  "AWS deployment — ECS, Lambda, S3, DynamoDB, CloudWatch cost & latency tracking",
-  "Full-stack delivery — React.js UIs wired to LLM-backed APIs with real-time feedback",
+  "LangGraph & LangChain agents — tool-calling, ReAct loops, multi-step orchestration",
+  "RAG pipelines — chunking, vector search, ChromaDB/FAISS, document intelligence",
+  "Production LLM integration — GPT-4o, Claude, prompt engineering, structured outputs",
+  "FastAPI backends — 80+ REST APIs, JWT, RBAC, Redis caching, async workflows",
+  "PostgreSQL & performance — schema design, query optimization, 45% load-time gains",
+  "Cloud & deployment — Docker containerization, AWS S3, CI/CD, full-stack React delivery",
 ];
 
 export const About = () => (
@@ -23,21 +23,22 @@ export const About = () => (
 
       <div className="space-y-5 text-base text-muted-foreground mb-14 max-w-[65ch]">
         <p>
-          AI / LLM Engineer with almost 3 years shipping agentic systems, RAG
-          pipelines, and Python backends on AWS. I built HyphenView — an AI
-          Text-to-SQL platform with 65% adoption among 50+ enterprise users — and
-          a LangGraph autonomous job-hunting system with real-time tool-calling and
-          embedding-based skill matching.
+          AI / LLM Engineer with 2+ years shipping agentic systems, RAG pipelines,
+          and Python backends at Erasmith Pvt Ltd. I built HyphenView — an AI
+          Text-to-SQL platform with 65% adoption among 50+ enterprise users — plus
+          a LangGraph job-search agent and a live-deployed AI shopping assistant
+          with tool-calling workflows.
         </p>
         <p>
-          I work across the full LLM lifecycle: prompt engineering, vector store
-          design, multi-step orchestration, observability, and deployment. Strong
-          full-stack capability (React, FastAPI, PostgreSQL) so features ship as
-          complete products, not disconnected API experiments.
+          I work across the full stack: prompt engineering, vector store design,
+          FastAPI services, PostgreSQL optimization, and React frontends. Also
+          built EraDesk, an internal productivity platform with 5-level RBAC and
+          Excel import pipelines, and a FastAPI microservice for KPI analytics
+          and ownership tracking.
         </p>
         <p className="text-foreground/80 font-medium">
-          Targeting Python backend, AI application, and full-stack roles where I can
-          own model integration through user-facing delivery.
+          Targeting AI/LLM Engineer, Python Backend, and full-stack roles.
+          Open to relocation pan-India.
         </p>
       </div>
 

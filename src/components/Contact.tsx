@@ -1,7 +1,7 @@
 import React from "react";
-import { Github, Linkedin, Mail, MapPin, Clock, Download, ArrowRight, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Download, ArrowRight, Phone } from "lucide-react";
 
-const RESUME_PATH = "/Yuvraj_Jaiswal_AI_LLM_Engineer.pdf";
+const RESUME_PATH = "/Yuvraj_Jaiswal_Python_Backend_Engineer.pdf";
 
 export const Contact = () => (
   <section id="contact" className="py-32 bg-card border-t border-border">
@@ -14,8 +14,9 @@ export const Contact = () => (
       <h2 className="text-foreground mb-4">Open to the right opportunity.</h2>
 
       <p className="text-base text-muted-foreground mb-10 max-w-[58ch]">
-        Open to Python backend, AI application, and full-stack roles. Immediate to
-        15-day notice. Remote or on-site in Noida, Bangalore, or Gurgaon.
+        Open to AI/LLM Engineer, Python backend, and full-stack roles.
+        Currently at Erasmith Pvt Ltd. Open to relocation pan-India —
+        Bangalore, Hyderabad, Pune, Gurgaon, or remote-friendly.
       </p>
 
       <div className="flex flex-wrap gap-3 mb-14">
@@ -70,11 +71,7 @@ export const Contact = () => (
         </a>
         <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
           <MapPin size={15} aria-hidden="true" />
-          Noida, India
-        </span>
-        <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-          <Clock size={15} aria-hidden="true" />
-          Immediate – 15 days notice
+          Noida, India · Open to pan-India relocation
         </span>
       </div>
     </div>
